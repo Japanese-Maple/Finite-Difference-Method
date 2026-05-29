@@ -12,8 +12,6 @@ $$\frac{\partial u}{\partial t} = \alpha \left( \frac{\partial^2 u}{\partial x^2
 
 Implemented in **`solhe.py`**, this class simulates how thermal energy diffuses through a two-dimensional medium over time under a diffusion coefficient $\alpha$. The class implements a time-dependent explicit finite difference loop that calculates the next state of the system based on its current state, while continuously updating four independent boundary conditions along the outer edges of the grid at every time step. To ensure the simulation remains stable and does not diverge numerically, the time step $\Delta t$ is strictly limited based on the spatial resolution $\Delta x$ to satisfy the mathematical CFL stability constraint.
 
-https://github.com/Japanese-Maple/Finite-Difference-Method/assets/YOUR_GEN_ID_1.mp4
-
 ---
 
 ### `Wave_Equation` (Hyperbolic Solver)
@@ -21,10 +19,6 @@ https://github.com/Japanese-Maple/Finite-Difference-Method/assets/YOUR_GEN_ID_1.
 $$\frac{\partial^2 u}{\partial t^2} = c^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)$$
 
 Implemented in **`solwe.py`**, this class models the physical propagation of displacement waves (such as ripples on a surface) through a dynamic spatial domain. It solves a second-order time-stepping scheme using a leap-frog integration style, meaning it references both the current and previous time steps to compute the system's acceleration. A key feature of this class is its capability to enforce zero-boundary Dirichlet conditions across irregular, non-rectangular spaces by applying custom geometric masks (such as a circle or ellipse) directly to the flattened grid at every step of the simulation loop.
-
-<p align="center">
-  <video src="Demonstrations/Outputs/Wave_Equation_Simulation_2D.mp4" width="700" controls autoplay loop muted></video>
-</p
 
 ---
 
