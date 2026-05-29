@@ -101,7 +101,8 @@ class Heat_Equation():
         self._get_runtime()
         return u_solution, vmax, vmin
 
-    def render_Heat_Eqn_2D(self, solution: np.ndarray, vmax: float, vmin: float):
+    def render_Heat_Eqn_2D(self, solution: np.ndarray, vmax: float, vmin: float,
+                           video_filename:str='Heat_Equation_Simulation_2D.mp4'):
 
         self.start_time = time.time()
 
@@ -132,7 +133,6 @@ class Heat_Equation():
 
         print(f"Sample frame resolution: {width}x{height} → using {even_width}x{even_height} for video")
 
-        video_filename = 'HE_2D_2D.mp4'
         print("Stitching frames into video...")
 
         ffmpeg_cmd = f"""
@@ -151,7 +151,8 @@ class Heat_Equation():
         print(f"Video saved to {video_filename}")
         self._get_runtime()
 
-    def render_Heat_Eqn_3D(self, solution: np.ndarray, vmax: float, vmin: float):
+    def render_Heat_Eqn_3D(self, solution: np.ndarray, vmax: float, vmin: float,
+                           video_filename:str='Heat_Equation_Simulation_3D.mp4'):
 
         self.start_time = time.time()
 
@@ -192,7 +193,6 @@ class Heat_Equation():
 
         print(f"Sample frame resolution: {width}x{height} → using {even_width}x{even_height} for video")
 
-        video_filename = 'HE_2D_3D.mp4'
         print("Stitching frames into video...")
 
         ffmpeg_cmd = f"""
