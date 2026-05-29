@@ -100,18 +100,18 @@ class Poisson_Equation():
             axis.set_edgecolor('w')
 
         rows, cols, values = find(L)
-        U[0][0].scatter(rows, cols, c=values, marker = 's', s=300 * U[0][0].get_position().width / n, cmap='viridis')
+        U[0][0].scatter(rows, cols, c=values, marker = 's', s=300 * U[0][0].get_position().width / self.n, cmap='viridis')
         U[0][0].set_aspect('equal')
         U[0][0].invert_yaxis()
         # U[0][0].spy(A_sparse, markersize=300 * U[0][0].get_position().width / n)
-        U[0][0].set_title(f"2D Poisson Equation (n={n})")
+        U[0][0].set_title(f"2D Poisson Equation (n={self.n})")
 
 
         U[1][0].set_title('Heatmap')
         U[1][0].imshow(solution, cmap='viridis', interpolation='nearest')
-        U[1][0].set_xticks([0,n])
+        U[1][0].set_xticks([0,self.n])
         U[1][0].set_xlabel('X')
-        U[1][0].set_yticks([0,n])
+        U[1][0].set_yticks([0,self.n])
         U[1][0].set_ylabel('Y')
 
         U[1][1].grid(False)
