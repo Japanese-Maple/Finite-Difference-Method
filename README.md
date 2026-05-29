@@ -1,7 +1,3 @@
-Here is a streamlined, simplified version. Each class is broken down into a single, concise paragraph alongside its corresponding governing differential equation.
-
----
-
 ### `Poisson_Equation` (Elliptic Solver)
 
 $$\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = f(x,y)$$
