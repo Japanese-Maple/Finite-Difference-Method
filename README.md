@@ -13,7 +13,7 @@ $$\frac{\partial u}{\partial t} = \alpha \left( \frac{\partial^2 u}{\partial x^2
 Implemented in **`solhe.py`**, this class simulates how thermal energy diffuses through a two-dimensional medium over time under a diffusion coefficient $\alpha$. The class implements a time-dependent explicit finite difference loop that calculates the next state of the system based on its current state, while continuously updating four independent boundary conditions along the outer edges of the grid at every time step. To ensure the simulation remains stable and does not diverge numerically, the time step $\Delta t$ is strictly limited based on the spatial resolution $\Delta x$ to satisfy the mathematical CFL stability constraint.
 
 <p align="center">
-  <video src="Demonstrations/Outputs/Heat_Equation_Simulation_2D.mp4" width="700" controls autoplay loop muted></video>
+  <video src="https://raw.githubusercontent.com/Japanese-Maple/Finite-Difference-Method/main/Demonstrations/Outputs/Heat_Equation_Simulation_2D.mp4" width="700" controls autoplay loop muted></video>
 </p>
 
 ---
