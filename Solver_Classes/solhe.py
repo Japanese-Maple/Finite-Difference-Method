@@ -11,6 +11,8 @@ from joblib import Parallel, delayed
 from PIL import Image
 import time
 
+#===============================================================================================================================================================
+
 class Heat_Equation():
     def __init__(self, H, n, alpha, simulation_time, IC, upper, lower, right, left, dpi: int = 100, number_of_workers: int = 15, **mask_kwargs):
         self.H = H

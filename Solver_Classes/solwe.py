@@ -11,6 +11,8 @@ from joblib import Parallel, delayed
 from PIL import Image
 import time
 
+#===============================================================================================================================================================
+
 class Wave_Equation():
     def __init__(self, H, n, simulation_time, IC, mask, dpi: int = 100, number_of_workers: int = 15, **mask_kwargs):
         self.H = H
